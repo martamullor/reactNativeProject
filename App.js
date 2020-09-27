@@ -1,5 +1,7 @@
+import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import ColorBox from "./components/ColorBox";
 
 export default function App() {
   return (
@@ -17,6 +19,7 @@ export default function App() {
       <View style={[styles.container, styles.orange]}>
         <Text style={styles.text}>Orange: #cb4b16</Text>
       </View>
+      <ColorBox />
     </SafeAreaView>
   );
 }
