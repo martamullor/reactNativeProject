@@ -1,9 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import ColorBox from "./components/ColorBox";
+import Food from "./components/Food";
 
 export default function App() {
+  const FOODS = ["Apples", "Brocoli", "Cookies", "Doritos", "Eclairs"];
   return (
     <SafeAreaView style={styles.safeArea}>
       <Text style={styles.title}>Here are some boxes of different colours</Text>
@@ -11,6 +13,13 @@ export default function App() {
       <ColorBox colorName="Blue" hexCode="#268bd2" />
       <ColorBox colorName="Magenta" hexCode="#d33682" />
       <ColorBox colorName="Orange" hexCode="#cb4b16" />
+
+      <Text style={styles.title}>List Components</Text>
+      <FlatList
+        data={FOODS}
+        keyExtractor={item => item}
+        renderItem={({ item }) => <Food name={item} />}
+      />
     </SafeAreaView>
   );
 }
