@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { black } from "color-name";
 
 export default function ColorBox({ colorName, hexColor }) {
   const boxColor = {
