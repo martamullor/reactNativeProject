@@ -4,7 +4,7 @@ import * as Localization from 'expo-localization';
 import i18n from 'i18n-js';
 
 i18n.translations = {
-  ca: { screenExample: 'Fundació.cat català' },
+  ca: { homeContent: 'Benvingut', screenExample: 'Fundació.cat català' },
 };
 i18n.locale = Localization.locale;
 i18n.locale = 'ca';
