@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from './screens/Home';
-import ColorPalette from './screens/ColorPalette';
+import ScreenExample from './screens/ScreenExample';
 import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
@@ -11,11 +11,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen
-          name="ColorPalette"
-          component={ColorPalette}
-          options={({ route }) => ({ title: route.params.paletteName })}
-        />
+        <Stack.Screen name="ScreenExample" component={ScreenExample} />
       </Stack.Navigator>
     </NavigationContainer>
   );
