@@ -2,10 +2,12 @@ import i18n from 'i18n-js';
 import * as Localization from 'expo-localization';
 
 i18n.translations = {
-  ca: require('./assets/i18n/ca.json'),
+  en: require('./assets/i18n/en.json'),
+  es: require('./assets/i18n/es.json'),
 };
 i18n.locale = Localization.locale;
-i18n.locale = 'ca';
+// If I need to set up a language by default and the language is no English
+//i18n.locale = 'en';
 i18n.fallbacks = true;
 
 export default i18n;
