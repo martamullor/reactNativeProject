@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import { useFonts, Rubik_700Bold } from '@expo-google-fonts/rubik';
 
 export const buttonStyle = {
   display: 'flex',
@@ -25,34 +24,27 @@ export const textStyles = {
 };
 
 export const MyAppButton = ({ navigation, fullButton, style, ...props }) => {
-  let [fontsLoaded] = useFonts({
-    Rubik_700Bold,
-  });
-  if (!fontsLoaded) {
-    return <Text>Loading</Text>;
+  if (fullButton) {
+    return (
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate(navigation);
+        }}
+        style={[buttonStyle, fullButtonStyle, style]}
+      >
+        <Text {...props} style={[textStyles, { color: 'white' }, style]} />
+      </TouchableOpacity>
+    );
   } else {
-    if (fullButton) {
-      return (
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate(navigation);
-          }}
-          style={[buttonStyle, fullButtonStyle, style]}
-        >
-          <Text {...props} style={[textStyles, { color: 'white' }, style]} />
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate(navigation);
-          }}
-          style={[buttonStyle, overlineButtonStyle, style]}
-        >
-          <Text {...props} style={[textStyles, { color: '#e3142b' }, style]} />
-        </TouchableOpacity>
-      );
-    }
+    return (
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate(navigation);
+        }}
+        style={[buttonStyle, overlineButtonStyle, style]}
+      >
+        <Text {...props} style={[textStyles, { color: '#e3142b' }, style]} />
+      </TouchableOpacity>
+    );
   }
 };

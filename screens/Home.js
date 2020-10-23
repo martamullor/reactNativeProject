@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import i18n from '../i18';
+import { MyAppText } from '../components/MyAppText';
 
 export default function Home({ navigation }) {
   return (
@@ -10,7 +11,7 @@ export default function Home({ navigation }) {
       }}
       style={styles.container}
     >
-      <Text style={styles.text}>{i18n.t('homeContent')}</Text>
+      <MyAppText style={styles.text}>{i18n.t('homeContent')}</MyAppText>
     </TouchableOpacity>
   );
 }
