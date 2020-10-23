@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import i18n from 'i18n-js';
+import { MyAppText } from '../components/MyAppText';
 
 export default function ScreenExample() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{i18n.t('screenExample')}</Text>
+      <MyAppText style={styles.text}>{i18n.t('screenExample')}</MyAppText>
     </View>
   );
 }
@@ -16,9 +17,5 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     height: '100%',
-  },
-  text: {
-    fontWeight: 'bold',
-    fontSize: 15,
   },
 });

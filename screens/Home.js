@@ -23,8 +23,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: '100%',
   },
-  text: {
-    fontWeight: 'bold',
-    fontSize: 15,
-  },
 });

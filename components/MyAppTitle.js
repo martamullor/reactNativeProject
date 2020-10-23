@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 
 export const textStyles = {
-  fontFamily: 'Rubik_700Bold',
+  fontFamily: 'Montserrat_400Regular',
   fontSize: 30,
   color: 'black',
 };

@@ -2,9 +2,8 @@ import React from 'react';
 import { Text } from 'react-native';
 
 export const textStyles = {
-  fontFamily: 'Rubik_300Light',
-  fontSize: 16,
-  lineHeight: 22.4,
+  fontFamily: 'Montserrat_400Regular',
+  fontSize: 26,
   color: 'black',
 };
 
