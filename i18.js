@@ -7,7 +7,7 @@ i18n.translations = {
 };
 i18n.locale = Localization.locale;
 // If I need to set up a language by default and the language is no English
-//i18n.locale = 'en';
+i18n.locale = 'es';
 i18n.fallbacks = true;
 
 export default i18n;

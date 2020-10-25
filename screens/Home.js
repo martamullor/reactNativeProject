@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import i18n from '../i18';
 import { MyAppText } from '../components/MyAppText';
 
@@ -7,7 +7,7 @@ export default function Home({ navigation }) {
   return (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate('ScreenExample');
+        navigation.navigate('LoginScreen');
       }}
       style={styles.container}
     >

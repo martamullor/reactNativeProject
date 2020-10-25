@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Text } from 'react-native';
 import Home from './screens/Home';
+import LoginScreen from './screens/LoginScreen';
 import ScreenExample from './screens/ScreenExample';
 import { createStackNavigator } from '@react-navigation/stack';
 import {
@@ -58,6 +59,7 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="ScreenExample" component={ScreenExample} />
+          <Stack.Screen name="LoginScreen" component={LoginScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
