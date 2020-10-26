@@ -73,7 +73,7 @@ export const TextStyles = StyleSheet.create({
     fontSize: 15,
     borderWidth: 1,
     borderColor: AppStyles.color.whiteGrey,
-    padding: 12,
+    padding: 18,
     borderRadius: 10,
   },
   titleStyle: {
