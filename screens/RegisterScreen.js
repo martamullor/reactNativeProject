@@ -5,7 +5,7 @@ import { MyAppInput } from '../components/MyAppInput';
 import { MyAppButton } from '../components/MyAppButton';
 import { MyAppTitle } from '../components/MyAppTitle';
 
-export default class LoginScreen extends Component {
+export default class RegisterScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,8 +23,8 @@ export default class LoginScreen extends Component {
   };
 
   render() {
-    const { email, password } = this.state;
     const { navigation } = this.props;
+    const { email, password } = this.state;
     return (
       <View style={styles.container}>
         <MyAppTitle style={styles.title}>{i18n.t('LOGIN_TITLE')}</MyAppTitle>
@@ -41,13 +41,13 @@ export default class LoginScreen extends Component {
           label={i18n.t('LOGIN_LABEL_PASSWORD')}
           secureTextEntry={true}
         />
-        <MyAppButton onPress={this.onSubmit}>{i18n.t('LOGIN')}</MyAppButton>
+        <MyAppButton onPress={this.onSubmit}>{i18n.t('REGISTER')}</MyAppButton>
         <MyAppButton
           onPress={() => {
-            navigation.navigate('RegisterScreen');
+            navigation.navigate('LoginScreen');
           }}
         >
-          {i18n.t('LOGIN_BUTTON')}
+          {i18n.t('REGISTER_BUTTON')}
         </MyAppButton>
       </View>
     );

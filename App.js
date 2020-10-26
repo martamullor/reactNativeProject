@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Text } from 'react-native';
 import Home from './screens/Home';
 import LoginScreen from './screens/LoginScreen';
 import ScreenExample from './screens/ScreenExample';
+import RegisterScreen from './screens/RegisterScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import {
   useFonts,
@@ -51,15 +52,26 @@ export default function App() {
     Montserrat_900Black_Italic,
   });
 
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
+  //const user = null;
+
   if (!fontsLoaded) {
     return <Text>Loading</Text>;
   } else {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="ScreenExample" component={ScreenExample} />
-          <Stack.Screen name="LoginScreen" component={LoginScreen} />
+          {user ? (
+            <Stack.Screen name="Home">
+              {(props) => <ScreenExample {...props} extraData={user} />}
+            </Stack.Screen>
+          ) : (
+            <>
+              <Stack.Screen name="LoginScreen" component={LoginScreen} />
+              <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+            </>
+          )}
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -5,5 +5,9 @@
   "LOGIN_LABEL_EMAIL": "Correo electrónico",
   "LOGIN_PLACEHOLDER_PASSWORD": "Contraseña",
   "LOGIN_LABEL_PASSWORD": "Constraseña",
-  "LOGIN_TITLE": "Firebase - Mail & Password"
+  "LOGIN_TITLE": "Firebase - Mail & Password",
+  "LOGIN_BUTTON": "Ir a página de login",
+  "LOGIN": "Login",
+  "REGISTER_BUTTON": "Ir a página de register",
+  "REGISTER": "Register"
 }

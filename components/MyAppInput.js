@@ -8,6 +8,7 @@ export const MyAppInput = ({
   placeholder,
   value,
   onChangeText,
+  secureTextEntry,
 }) => {
   return (
     <View>
@@ -18,6 +19,7 @@ export const MyAppInput = ({
         placeholderTextColor="#3d3935"
         value={value}
         onChangeText={onChangeText}
+        secureTextEntry={secureTextEntry}
         underlineColorAndroid="transparent"
       />
     </View>
