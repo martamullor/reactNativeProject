@@ -13,31 +13,37 @@ export default class RegisterScreen extends Component {
     this.state = {
       email: '',
       password: '',
+      errorMessage: '',
+      loading: false,
     };
+  }
+
+  onLoginSuccess() {
+    const { navigation } = this.props;
+    navigation.navigate('ScreenExample');
+  }
+  onLoginFailure(errorMessage) {
+    this.setState({ error: errorMessage, loading: false });
   }
 
   onChangeEmail = (email) => this.setState({ email });
 
   onChangePassword = (password) => this.setState({ password });
 
-  onLoginSuccess() {
-    //this.props.navigation.navigate('App');
-    console.log('Login Success');
-  }
-
-  async onRegisterPress() {
-    const { email, password } = this.state;
+  async signInWithEmail() {
     await firebase
       .auth()
-      .createUserWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then(this.onLoginSuccess.bind(this))
       .catch((error) => {
+        console.log(error);
+        alert(error);
         let errorCode = error.code;
         let errorMessage = error.message;
-        if (errorCode == 'auth/weak-password') {
-          //this.onLoginFailure.bind(this)('Weak Password!');
+        if (errorCode === 'auth/weak-password') {
+          this.onLoginFailure.bind(this)('Weak Password!');
         } else {
-          //this.onLoginFailure.bind(this)(errorMessage);
+          this.onLoginFailure.bind(this)(errorMessage);
         }
       });
   }
@@ -61,7 +67,7 @@ export default class RegisterScreen extends Component {
           label={i18n.t('LOGIN_LABEL_PASSWORD')}
           secureTextEntry={true}
         />
-        <MyAppButton onPress={this.onRegisterPress}>
+        <MyAppButton onPress={() => this.signInWithEmail()}>
           {i18n.t('REGISTER')}
         </MyAppButton>
         <MyAppButton

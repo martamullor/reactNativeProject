@@ -5,22 +5,48 @@ import { MyAppInput } from '../components/MyAppInput';
 import { MyAppButton } from '../components/MyAppButton';
 import { MyAppTitle } from '../components/MyAppTitle';
 
+import * as firebase from 'firebase';
+
 export default class LoginScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password: '',
+      email: 'test@gmail.com',
+      password: 'Slash12345!',
+      errorMessage: '',
+      loading: false,
     };
+  }
+
+  onLoginSuccess() {
+    const { navigation } = this.props;
+    navigation.navigate('ScreenExample');
+  }
+  onLoginFailure(errorMessage) {
+    this.setState({ error: errorMessage, loading: false });
   }
 
   onChangeEmail = (email) => this.setState({ email });
 
   onChangePassword = (password) => this.setState({ password });
 
-  onSubmit = () => {
-    console.log('onSubmitForm');
-  };
+  async loginWithEmail() {
+    await firebase
+      .auth()
+      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then(this.onLoginSuccess.bind(this))
+      .catch((error) => {
+        console.log(error);
+        alert(error);
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        if (errorCode === 'auth/weak-password') {
+          this.onLoginFailure.bind(this)('Weak Password!');
+        } else {
+          this.onLoginFailure.bind(this)(errorMessage);
+        }
+      });
+  }
 
   render() {
     const { email, password } = this.state;
@@ -41,7 +67,9 @@ export default class LoginScreen extends Component {
           label={i18n.t('LOGIN_LABEL_PASSWORD')}
           secureTextEntry={true}
         />
-        <MyAppButton onPress={this.onSubmit}>{i18n.t('LOGIN')}</MyAppButton>
+        <MyAppButton onPress={() => this.loginWithEmail()}>
+          {i18n.t('LOGIN')}
+        </MyAppButton>
         <MyAppButton
           onPress={() => {
             navigation.navigate('RegisterScreen');
