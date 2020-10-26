@@ -2,8 +2,8 @@ import React from 'react';
 import { Text } from 'react-native';
 
 export const textStyles = {
-  fontFamily: 'Montserrat_400Regular',
-  fontSize: 30,
+  fontFamily: 'Montserrat_800ExtraBold',
+  fontSize: 28,
   color: 'black',
 };
 

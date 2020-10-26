@@ -53,12 +53,12 @@ export const TextStyles = StyleSheet.create({
   inputTextStyle: {
     fontFamily: 'Montserrat_700Bold',
     fontSize: 15,
-    borderWidth: 2,
-    borderColor: AppStyles.color.darkGrey,
-    padding: 15,
+    borderWidth: 1,
+    borderColor: AppStyles.color.black,
+    padding: 10,
   },
   labelStyle: {
-    fontFamily: 'Montserrat_700Bold',
+    fontFamily: 'Montserrat_400Regular',
     fontSize: 14,
     color: '#3d3935',
     padding: 5,
@@ -69,11 +69,12 @@ export const TextStyles = StyleSheet.create({
     paddingVertical: 15,
   },
   inputBoldTextStyle: {
-    fontFamily: 'Montserrat_700Bold',
+    fontFamily: 'Montserrat_400Regular',
     fontSize: 15,
-    borderWidth: 2,
-    borderColor: '#c5bbaa',
-    padding: 15,
+    borderWidth: 1,
+    borderColor: AppStyles.color.whiteGrey,
+    padding: 12,
+    borderRadius: 10,
   },
   titleStyle: {
     fontFamily: 'Montserrat_700Bold',

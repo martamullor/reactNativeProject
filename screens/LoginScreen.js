@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import i18n from 'i18n-js';
 import { MyAppInput } from '../components/MyAppInput';
 import { MyAppButton } from '../components/MyAppButton';
+import { MyAppTitle } from '../components/MyAppTitle';
 
 export default class LoginScreen extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class LoginScreen extends Component {
     const { email, password } = this.state;
     return (
       <View style={styles.container}>
+        <MyAppTitle style={styles.title}>{i18n.t('LOGIN_TITLE')}</MyAppTitle>
         <MyAppInput
           placeholder={i18n.t('LOGIN_PLACEHOLDER_EMAIL')}
           value={email}
@@ -49,7 +51,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    height: '100%',
-    marginHorizontal: 30,
+    marginHorizontal: 25,
+  },
+  title: {
+    marginVertical: 30,
   },
 });
