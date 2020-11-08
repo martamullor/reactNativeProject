@@ -9,6 +9,10 @@ A React native project initialized with [Expo](https://docs.expo.io/)
 3. MultiLanguage with [i18n](https://www.npmjs.com/package/i18n)
 4. Two Basic Components like Button and Text.
 
+![Image App](assets/image-1.jpg)
+![Image App](assets/image-3.jpg)
+
+
 ## Contribute
 
 Support by giving a ⭐. 
