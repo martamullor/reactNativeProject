@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TextInput, View } from 'react-native';
-import { TextStyles } from '../style/AppStyles';
+import { AppStyles, TextStyles } from '../style/AppStyles';
 
 export const MyAppInput = ({
   style,
@@ -16,7 +16,7 @@ export const MyAppInput = ({
       <TextInput
         style={[TextStyles.inputBoldTextStyle, style]}
         placeholder={placeholder}
-        placeholderTextColor="#3d3935"
+        placeholderTextColor={AppStyles.color.grey}
         value={value}
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}

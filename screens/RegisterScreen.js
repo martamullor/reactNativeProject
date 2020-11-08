@@ -6,6 +6,8 @@ import { MyAppButton } from '../components/MyAppButton';
 import { MyAppTitle } from '../components/MyAppTitle';
 
 import firebase from '../services/firebase';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { GeneralStyles } from '../style/AppStyles';
 
 export default class RegisterScreen extends Component {
   constructor(props) {
@@ -52,13 +54,14 @@ export default class RegisterScreen extends Component {
     const { navigation } = this.props;
     const { email, password } = this.state;
     return (
-      <View style={styles.container}>
+      <View style={GeneralStyles.contentAligned}>
         <MyAppTitle style={styles.title}>{i18n.t('LOGIN_TITLE')}</MyAppTitle>
         <MyAppInput
           placeholder={i18n.t('LOGIN_PLACEHOLDER_EMAIL')}
           value={email}
           onChangeText={this.onChangeEmail}
           label={i18n.t('LOGIN_LABEL_EMAIL')}
+          style={styles.input}
         />
         <MyAppInput
           placeholder={i18n.t('LOGIN_PLACEHOLDER_PASSWORD')}
@@ -66,11 +69,17 @@ export default class RegisterScreen extends Component {
           onChangeText={this.onChangePassword}
           label={i18n.t('LOGIN_LABEL_PASSWORD')}
           secureTextEntry={true}
+          style={styles.input}
         />
-        <MyAppButton onPress={() => this.signInWithEmail()}>
+        <MyAppButton
+          style={styles.button}
+          onPress={() => this.signInWithEmail()}
+        >
           {i18n.t('REGISTER')}
         </MyAppButton>
         <MyAppButton
+          linkButton
+          style={styles.button}
           onPress={() => {
             navigation.navigate('LoginScreen');
           }}
@@ -83,12 +92,13 @@ export default class RegisterScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginHorizontal: 25,
-    marginTop: 120,
-  },
   title: {
-    marginVertical: 30,
+    marginVertical: hp('2%'),
+  },
+  input: {
+    marginVertical: hp('0.3%'),
+  },
+  button: {
+    marginVertical: hp('3%'),
   },
 });

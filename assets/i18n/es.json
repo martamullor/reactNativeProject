@@ -1,13 +1,13 @@
 {
   "homeContent": "Contenido de la home",
-  "screenExample": "Te has registrado correctamente",
+  "screenExample": "Has accedido al contenido de usuarios registrados 👏🏻",
   "LOGIN_PLACEHOLDER_EMAIL": "Email",
-  "LOGIN_LABEL_EMAIL": "Correo electrónico",
+  "LOGIN_LABEL_EMAIL": "✉️ Correo electrónico",
   "LOGIN_PLACEHOLDER_PASSWORD": "Contraseña",
-  "LOGIN_LABEL_PASSWORD": "Constraseña",
-  "LOGIN_TITLE": "Firebase Login:",
-  "LOGIN_BUTTON": "¿No tienes cuenta?  Regístrate.",
+  "LOGIN_LABEL_PASSWORD": "🎯 Contraseña",
+  "LOGIN_TITLE": "Firebase:",
+  "LOGIN_BUTTON": "¿No tienes cuenta?  Regístrate ➡️",
   "LOGIN": "Login",
-  "REGISTER_BUTTON": "Ir a página de register",
+  "REGISTER_BUTTON": "¿Ya tienes cuenta? Ve a tu cuenta ➡️",
   "REGISTER": "Register"
 }

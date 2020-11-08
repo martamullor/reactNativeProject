@@ -6,6 +6,8 @@ import { MyAppButton } from '../components/MyAppButton';
 import { MyAppTitle } from '../components/MyAppTitle';
 
 import firebase from '../services/firebase';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { GeneralStyles } from '../style/AppStyles';
 
 export default class LoginScreen extends Component {
   constructor(props) {
@@ -52,13 +54,14 @@ export default class LoginScreen extends Component {
     const { email, password } = this.state;
     const { navigation } = this.props;
     return (
-      <View style={styles.container}>
+      <View style={GeneralStyles.contentAligned}>
         <MyAppTitle style={styles.title}>{i18n.t('LOGIN_TITLE')}</MyAppTitle>
         <MyAppInput
           placeholder={i18n.t('LOGIN_PLACEHOLDER_EMAIL')}
           value={email}
           onChangeText={this.onChangeEmail}
           label={i18n.t('LOGIN_LABEL_EMAIL')}
+          style={styles.input}
         />
         <MyAppInput
           placeholder={i18n.t('LOGIN_PLACEHOLDER_PASSWORD')}
@@ -66,6 +69,7 @@ export default class LoginScreen extends Component {
           onChangeText={this.onChangePassword}
           label={i18n.t('LOGIN_LABEL_PASSWORD')}
           secureTextEntry={true}
+          style={styles.input}
         />
         <MyAppButton
           style={styles.button}
@@ -88,15 +92,13 @@ export default class LoginScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent:'center',
-    marginHorizontal: 40,
-  },
   title: {
-    marginVertical: 30,
+    marginVertical: hp('2%'),
+  },
+  input: {
+    marginVertical: hp('0.3%'),
   },
   button: {
-    marginTop: 30,
+    marginVertical: hp('3%'),
   },
 });

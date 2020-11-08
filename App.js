@@ -64,13 +64,26 @@ export default function App() {
         <Stack.Navigator>
           {user ? (
             <Stack.Screen name="ScreenExample">
+              options={{ headerShown: false }}
               {(props) => <ScreenExample {...props} extraData={user} />}
             </Stack.Screen>
           ) : (
             <>
-              <Stack.Screen name="LoginScreen" component={LoginScreen} />
-              <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-              <Stack.Screen name="ScreenExample" component={ScreenExample} />
+              <Stack.Screen
+                options={{ headerShown: false }}
+                name="LoginScreen"
+                component={LoginScreen}
+              />
+              <Stack.Screen
+                options={{ headerShown: false }}
+                name="RegisterScreen"
+                component={RegisterScreen}
+              />
+              <Stack.Screen
+                options={{ headerShown: false }}
+                name="ScreenExample"
+                component={ScreenExample}
+              />
             </>
           )}
         </Stack.Navigator>
