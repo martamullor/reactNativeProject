@@ -1,4 +1,5 @@
 {
+  "homeContent": "Contenido de la home",
   "screenExample": "Has accedido al contenido de usuarios registrados 👏🏻",
   "LOGIN_PLACEHOLDER_EMAIL": "Email",
   "LOGIN_LABEL_EMAIL": "✉️ Correo electrónico",

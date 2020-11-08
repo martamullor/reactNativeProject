@@ -1,4 +1,12 @@
 {
-  "homeContent": "home content",
-  "screenExample": "Screen example"
+  "screenExample": "Has accedido al contenido de usuarios registrados 👏🏻",
+  "LOGIN_PLACEHOLDER_EMAIL": "Email",
+  "LOGIN_LABEL_EMAIL": "✉️ Correo electrónico",
+  "LOGIN_PLACEHOLDER_PASSWORD": "Contraseña",
+  "LOGIN_LABEL_PASSWORD": "🎯 Contraseña",
+  "LOGIN_TITLE": "React Native Template:",
+  "LOGIN_BUTTON": "¿No tienes cuenta?  Regístrate ➡️",
+  "LOGIN": "Login",
+  "REGISTER_BUTTON": "¿Ya tienes cuenta? Ve a tu cuenta ➡️",
+  "REGISTER": "Register"
 }

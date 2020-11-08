@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, StatusBar } from 'react-native';
-import i18n from 'i18n-js';
+import i18n from '../i18';
 import { MyAppInput } from '../components/MyAppInput';
 import { MyAppButton } from '../components/MyAppButton';
 import { MyAppTitle } from '../components/MyAppTitle';
