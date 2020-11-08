@@ -7,7 +7,8 @@ A React native project initialized with [Expo](https://docs.expo.io/)
 1. Basic project structure.
 2. Navigation with [@react-navigation/native](https://reactnavigation.org/) 
 3. MultiLanguage with [i18n](https://www.npmjs.com/package/i18n)
-4. Two Basic Components like Button and Text.
+4. Basic Components like Button, Text and Input.
+5. Login with [Firebase](https://firebase.google.com/)
 
 ## Contribute
 
