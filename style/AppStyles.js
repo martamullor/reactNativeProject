@@ -9,7 +9,7 @@ export const AppStyles = {
     red: '#e3142b',
     black: '#212721',
     grey: '#3d3935',
-    white: 'white',
+    white: '#f8f8f8',
     darkGrey: '#c5bbaa',
     whiteGrey: '#d7ccc4',
   },
