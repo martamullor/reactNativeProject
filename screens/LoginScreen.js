@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
 import i18n from 'i18n-js';
 import { MyAppInput } from '../components/MyAppInput';
 import { MyAppButton } from '../components/MyAppButton';
@@ -55,6 +55,7 @@ export default class LoginScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={GeneralStyles.contentAligned}>
+        <StatusBar barStyle="dark-content" />
         <MyAppTitle style={styles.title}>{i18n.t('LOGIN_TITLE')}</MyAppTitle>
         <MyAppInput
           placeholder={i18n.t('LOGIN_PLACEHOLDER_EMAIL')}

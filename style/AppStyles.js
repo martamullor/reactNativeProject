@@ -13,8 +13,8 @@ export const AppStyles = {
     darkGrey: '#c5bbaa',
     whiteGrey: '#d7ccc4',
   },
-  marginApp: {
-    marginHorizontal: hp('3%'),
+  paddingApp: {
+    paddingHorizontal: hp('3%'),
   },
 };
 
@@ -22,7 +22,8 @@ export const GeneralStyles = StyleSheet.create({
   contentAligned: {
     flex: 1,
     justifyContent: 'center',
-    marginHorizontal: AppStyles.marginApp.marginHorizontal,
+    paddingHorizontal: AppStyles.paddingApp.paddingHorizontal,
+    backgroundColor: AppStyles.color.white,
   },
 });
 
