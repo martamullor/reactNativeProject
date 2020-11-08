@@ -1,12 +1,12 @@
 {
   "homeContent": "Contenido de la home",
-  "screenExample": "Contenido página de ejemplo",
+  "screenExample": "Te has registrado correctamente",
   "LOGIN_PLACEHOLDER_EMAIL": "Email",
   "LOGIN_LABEL_EMAIL": "Correo electrónico",
   "LOGIN_PLACEHOLDER_PASSWORD": "Contraseña",
   "LOGIN_LABEL_PASSWORD": "Constraseña",
-  "LOGIN_TITLE": "Firebase - Mail & Password",
-  "LOGIN_BUTTON": "Ir a página de login",
+  "LOGIN_TITLE": "Firebase Login:",
+  "LOGIN_BUTTON": "¿No tienes cuenta?  Regístrate.",
   "LOGIN": "Login",
   "REGISTER_BUTTON": "Ir a página de register",
   "REGISTER": "Register"

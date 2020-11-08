@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TextInput, View } from 'react-native';
-import { TextStyles } from '../AppStyles';
+import { TextStyles } from '../style/AppStyles';
 
 export const MyAppInput = ({
   style,

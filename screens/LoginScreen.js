@@ -67,10 +67,15 @@ export default class LoginScreen extends Component {
           label={i18n.t('LOGIN_LABEL_PASSWORD')}
           secureTextEntry={true}
         />
-        <MyAppButton onPress={() => this.loginWithEmail()}>
+        <MyAppButton
+          style={styles.button}
+          onPress={() => this.loginWithEmail()}
+        >
           {i18n.t('LOGIN')}
         </MyAppButton>
         <MyAppButton
+          linkButton
+          style={styles.button}
           onPress={() => {
             navigation.navigate('RegisterScreen');
           }}
@@ -85,10 +90,13 @@ export default class LoginScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 25,
-    marginTop: 120,
+    justifyContent:'center',
+    marginHorizontal: 40,
   },
   title: {
     marginVertical: 30,
+  },
+  button: {
+    marginTop: 30,
   },
 });

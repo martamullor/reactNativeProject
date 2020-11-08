@@ -47,6 +47,24 @@ export const GeneralStyles = StyleSheet.create({
   },
 });
 
+export const ButtonStyles = StyleSheet.create({
+  overlineButton: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minWidth: wp('40%'),
+    borderColor: 'black',
+    borderWidth: wp('0.3%'),
+    borderRadius: wp('50%'),
+  },
+  linkButton: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minWidth: wp('40%'),
+  },
+});
+
 export const TextStyles = StyleSheet.create({
   linkStyle: {
     fontFamily: 'Montserrat_700Bold',
