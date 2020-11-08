@@ -10,8 +10,8 @@ A React native project initialized with [Expo](https://docs.expo.io/)
 4. Basic Components like Button, Text and Input.
 5. Login with [Firebase](https://firebase.google.com/)
 
-![Image App](assets/image-1.jpg :width: 200 px)
-![Image App](assets/image-2.jpg)
+![Image App](assets/image-1.jpg)
+![Image App 2](assets/image-2.jpg)
 
 
 ## Contribute
