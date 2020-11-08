@@ -5,7 +5,7 @@ import { MyAppInput } from '../components/MyAppInput';
 import { MyAppButton } from '../components/MyAppButton';
 import { MyAppTitle } from '../components/MyAppTitle';
 
-import * as firebase from 'firebase';
+import firebase from '../services/firebase';
 
 export default class LoginScreen extends Component {
   constructor(props) {
