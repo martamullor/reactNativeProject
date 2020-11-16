@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Text } from 'react-native';
 import LoginScreen from './screens/LoginScreen';
@@ -26,6 +26,8 @@ import {
   Montserrat_900Black,
   Montserrat_900Black_Italic,
 } from '@expo-google-fonts/montserrat';
+
+import firebase from './services/firebase';
 
 const Stack = createStackNavigator();
 
@@ -55,6 +57,13 @@ export default function App() {
   const [user, setUser] = useState(null);
   //const user = null;
 
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(function (user) {
+      return user ? setUser(user) : null;
+    });
+    console.log(user); // unsubscribe on unmount
+  }, [user]);
+
   if (!fontsLoaded) {
     return <Text>Loading</Text>;
   } else {
@@ -62,10 +71,11 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           {user ? (
-            <Stack.Screen name="ScreenExample">
+            <Stack.Screen
               options={{ headerShown: false }}
-              {(props) => <ScreenExample {...props} extraData={user} />}
-            </Stack.Screen>
+              name="ScreenExample"
+              component={ScreenExample}
+            />
           ) : (
             <>
               <Stack.Screen
