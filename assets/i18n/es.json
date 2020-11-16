@@ -9,5 +9,6 @@
   "LOGIN_BUTTON": "¿No tienes cuenta?  Regístrate ➡️",
   "LOGIN": "Login",
   "REGISTER_BUTTON": "¿Ya tienes cuenta? Ve a tu cuenta ➡️",
-  "REGISTER": "Register"
+  "REGISTER": "Register",
+  "LOGOUT": "Logout"
 }

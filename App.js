@@ -53,15 +53,13 @@ export default function App() {
     Montserrat_900Black_Italic,
   });
 
-  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
-  //const user = null;
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged(function (user) {
-      return user ? setUser(user) : null;
+    firebase.auth().onAuthStateChanged(function (loggedUser) {
+      return loggedUser ? setUser(loggedUser) : null;
     });
-    console.log(user); // unsubscribe on unmount
+    console.log(user);
   }, [user]);
 
   if (!fontsLoaded) {
@@ -87,11 +85,6 @@ export default function App() {
                 options={{ headerShown: false }}
                 name="RegisterScreen"
                 component={RegisterScreen}
-              />
-              <Stack.Screen
-                options={{ headerShown: false }}
-                name="ScreenExample"
-                component={ScreenExample}
               />
             </>
           )}
