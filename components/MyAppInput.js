@@ -20,6 +20,7 @@ export const MyAppInput = ({
         value={value}
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
+        autoCapitalize="none"
         underlineColorAndroid="transparent"
       />
     </View>
