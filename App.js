@@ -29,8 +29,6 @@ import {
 
 import firebase from './services/firebase';
 
-const Stack = createStackNavigator();
-
 export default function App() {
   let [fontsLoaded] = useFonts({
     Montserrat_100Thin,
@@ -74,6 +72,11 @@ export default function App() {
         options={{ headerShown: false }}
         name="RegisterScreen"
         component={RegisterScreen}
+      />
+      <AuthStack.Screen
+        options={{ headerShown: false }}
+        name="HomeStackScreen"
+        component={HomeStackScreen}
       />
     </AuthStack.Navigator>
   );
