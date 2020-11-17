@@ -62,33 +62,44 @@ export default function App() {
     console.log(user);
   }, [user]);
 
+  const AuthStack = createStackNavigator();
+  const AuthStackScreen = () => (
+    <AuthStack.Navigator>
+      <AuthStack.Screen
+        options={{ headerShown: false }}
+        name="LoginScreen"
+        component={LoginScreen}
+      />
+      <AuthStack.Screen
+        options={{ headerShown: false }}
+        name="RegisterScreen"
+        component={RegisterScreen}
+      />
+    </AuthStack.Navigator>
+  );
+
+  const HomeStack = createStackNavigator();
+  const HomeStackScreen = () => (
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        options={{ headerShown: false }}
+        name="ScreenExample"
+        component={ScreenExample}
+      />
+      <HomeStack.Screen
+        options={{ headerShown: false }}
+        name="AuthStackScreen"
+        component={AuthStackScreen}
+      />
+    </HomeStack.Navigator>
+  );
+
   if (!fontsLoaded) {
     return <Text>Loading</Text>;
   } else {
     return (
       <NavigationContainer>
-        <Stack.Navigator>
-          {user ? (
-            <Stack.Screen
-              options={{ headerShown: false }}
-              name="ScreenExample"
-              component={ScreenExample}
-            />
-          ) : (
-            <>
-              <Stack.Screen
-                options={{ headerShown: false }}
-                name="LoginScreen"
-                component={LoginScreen}
-              />
-              <Stack.Screen
-                options={{ headerShown: false }}
-                name="RegisterScreen"
-                component={RegisterScreen}
-              />
-            </>
-          )}
-        </Stack.Navigator>
+        {user ? <HomeStackScreen /> : <AuthStackScreen />}
       </NavigationContainer>
     );
   }
