@@ -15,7 +15,7 @@ const RegisterScreen = ({ navigation }) => {
   const [setErrorMessage] = useState('');
 
   const onLoginSuccess = () => {
-    navigation.navigate('ScreenExample');
+    navigation.navigate('HomeStackScreen');
   };
 
   const signInWithEmail = async () => {

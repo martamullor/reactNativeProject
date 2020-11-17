@@ -65,12 +65,6 @@ export const TextStyles = StyleSheet.create({
     padding: hp('2%'),
     borderRadius: hp('1.5%'),
   },
-  textStyle: {
-    fontFamily: 'Montserrat_700Bold',
-    fontSize: hp('1.6%'),
-    lineHeight: hp('1.6%'),
-    color: AppStyles.color.black,
-  },
   textStylesBold: {
     fontFamily: 'Montserrat_700Bold',
     fontSize: hp('1.6%'),

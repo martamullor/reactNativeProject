@@ -57,7 +57,6 @@ export default function App() {
     firebase.auth().onAuthStateChanged(function (loggedUser) {
       return loggedUser ? setUser(loggedUser) : null;
     });
-    console.log(user);
   }, [user]);
 
   const AuthStack = createStackNavigator();

@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 
 export const textStyles = {
   fontFamily: 'Montserrat_800ExtraBold',
-  fontSize: 28,
+  fontSize: 22,
   color: 'black',
 };
 
