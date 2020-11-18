@@ -10,7 +10,7 @@ import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 const ScreenExample = ({ navigation }) => {
   const onLogoutSuccess = () => {
-    navigation.navigate('AuthStackScreen');
+    navigation.navigate('LoginScreen');
   };
   const logout = async () => {
     await firebase

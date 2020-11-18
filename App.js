@@ -51,57 +51,38 @@ export default function App() {
     Montserrat_900Black_Italic,
   });
 
+  /*
   const [user, setUser] = useState(null);
-
   useEffect(() => {
     firebase.auth().onAuthStateChanged(function (loggedUser) {
       return loggedUser ? setUser(loggedUser) : null;
     });
-  }, [user]);
+  }, [user]);*/
 
-  const AuthStack = createStackNavigator();
-  const AuthStackScreen = () => (
-    <AuthStack.Navigator>
-      <AuthStack.Screen
-        options={{ headerShown: false }}
-        name="LoginScreen"
-        component={LoginScreen}
-      />
-      <AuthStack.Screen
-        options={{ headerShown: false }}
-        name="RegisterScreen"
-        component={RegisterScreen}
-      />
-      <AuthStack.Screen
-        options={{ headerShown: false }}
-        name="HomeStackScreen"
-        component={HomeStackScreen}
-      />
-    </AuthStack.Navigator>
-  );
-
-  const HomeStack = createStackNavigator();
-  const HomeStackScreen = () => (
-    <HomeStack.Navigator>
-      <HomeStack.Screen
-        options={{ headerShown: false }}
-        name="ScreenExample"
-        component={ScreenExample}
-      />
-      <HomeStack.Screen
-        options={{ headerShown: false }}
-        name="AuthStackScreen"
-        component={AuthStackScreen}
-      />
-    </HomeStack.Navigator>
-  );
+  const Stack = createStackNavigator();
 
   if (!fontsLoaded) {
     return <Text>Loading</Text>;
   } else {
     return (
       <NavigationContainer>
-        {user ? <HomeStackScreen /> : <AuthStackScreen />}
+        <Stack.Navigator>
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="LoginScreen"
+            component={LoginScreen}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="RegisterScreen"
+            component={RegisterScreen}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="ScreenExample"
+            component={ScreenExample}
+          />
+        </Stack.Navigator>
       </NavigationContainer>
     );
   }
